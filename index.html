@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form</p>
+    <form id="survey-form" action="https://survey-form.freecodecamp.rocks" method="post">
+    <fieldset>
+      <label id="name-label" for="name">Your name: <input id="name" type="text" placeholder="Your name" required/></label>
+      <label id="email-label" for="email">Your email: <input id="email" type="email" placeholder="Write your email" required></label>
+      <label id="number-label" for="number">Your age: <input id="number" type="number" min="18" max="35" placeholder="Your age"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Which pets do you like most (select at least one)?</legend>
+        <select id="dropdown" name="pets[]" multiple required>
+          <option value="1">Dog</option>
+          <option value="2">Cat</option>
+          <option value="3">Goldfish </option>
+          <option value="4">Parrot</option>
+        </select>
+        </fieldset>
+        <fieldset>
+          <legend> Which pets are at your home</legend>
+          <label><input type="checkbox" name="favorite_pets[]" value="1">Dog</label>
+          <label><input type="checkbox" name="favorite_pets[]" value="2">Cat</label>
+          <label><input type="checkbox" name="favorite_pets[]" value="3">Goldfish</label>
+          <label><input type="checkbox" name="favorite_pets[]" value="4">Parrot</label>
+        </fieldset>
+        <fieldset>
+          <legend>What is your favourite color?</legend>
+          <label for="blue"><input id="blue" type="radio"  name="color" value="blue" required>Blue</label>
+          <label for="green"><input id="green" type="radio" name="color" value="green">Green</label>
+         </fieldset>
+         <fieldset>
+           <legend> Could you give us some additional comments?</legend>
+           <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Add your comment"></textarea>
+        </fieldset>
+          <input id="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>
